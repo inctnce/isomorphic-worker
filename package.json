@@ -1,0 +1,24 @@
+{
+	"name": "universal-worker",
+	"version": "1.0.0",
+	"description": "Simple library for worker creation independently from your environment (node or browser)",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"/dist"
+	],
+	"scripts": {},
+	"keywords": [
+		"nodejs",
+		"javascript",
+		"typescript",
+		"web-worker",
+		"worker-threads"
+	],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^17.0.31",
+		"typescript": "^4.6.4"
+	}
+}
