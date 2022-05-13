@@ -1,4 +1,3 @@
-import fs from "fs/promises";
 import Worker from "../types/Worker";
 import createTempFile from "../utils/createTempFile/createTempFile";
 import serialization from "../utils/serialization";
@@ -27,7 +26,8 @@ export const nodeWorker: Worker = async <C, A, R>(func: Function, context?: C, a
 			worker.on("error", (err) => {
 				reject(err);
 			});
-			worker.on("exit", (exitCode) => {
+			worker.on("exit", async (exitCode) => {
+				const fs = await import("fs/promises");
 				fs.unlink(tempFilepath).catch((err) => reject(err));
 				reject(exitCode);
 			});

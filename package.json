@@ -1,6 +1,6 @@
 {
 	"name": "unified-worker",
-	"version": "0.0.6",
+	"version": "0.0.8",
 	"description": "Simple library for worker creation independently from your environment (node or browser)",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
