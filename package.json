@@ -1,13 +1,16 @@
 {
 	"name": "unified-worker",
-	"version": "0.0.8",
+	"version": "0.0.9.1",
 	"description": "Simple library for worker creation independently from your environment (node or browser)",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"files": [
 		"/dist"
 	],
-	"scripts": {},
+	"scripts": {
+		"build": "webpack",
+		"dev": "ts-node src/index.ts"
+	},
 	"keywords": [
 		"nodejs",
 		"javascript",
