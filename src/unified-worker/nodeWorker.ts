@@ -20,9 +20,7 @@ export const nodeWorker: IWorker = async <C, A, R>(func: Function, context?: C, 
 			reject(err);
 		});
 		worker.on("exit", async (exitCode: number) => {
-			eval("require")("fs/promises")
-				.unlink(tempFilepath)
-				.catch((err: any) => reject(err));
+			eval("require")("fs").unlink(tempFilepath, (err: string) => reject(err))
 			reject(exitCode);
 		});
 	});
